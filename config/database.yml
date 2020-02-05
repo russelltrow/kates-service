@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: kates_service_development
+  host: postgres
+  username: docker
+  password: 5oasd231aAS1asasx
+
+test:
+  <<: *default
+  database: kates_service_test
+  host: postgres
+  username: docker
+  password: 5oasd231aAS1asasx
